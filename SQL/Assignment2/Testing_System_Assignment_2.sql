@@ -2,7 +2,7 @@ create database Testing_System_Assignment_2;
 use Testing_System_Assignment_2;
 
 CREATE TABLE Department(
-	DepartmentID TINYINT PRIMARY KEY,
+	DepartmentID TINYINT PRIMARY KEY AUTO_INCREMENT,
     DepartmentName CHAR(50)
 );
 -- Add Data Department
@@ -15,7 +15,7 @@ VALUES
 (5, N'KyThuat');
 
 CREATE TABLE `Position` (
-    PositionID TINYINT PRIMARY KEY,
+    PositionID TINYINT PRIMARY KEY AUTO_INCREMENT,
     PositionName CHAR(50)
 );
 -- Add Data in Position tb
@@ -27,7 +27,7 @@ VALUES
 (4, N'Scrum Master'),
 (5, N'BA');
 CREATE TABLE `Account`(
-	AccountID TINYINT PRIMARY KEY,
+	AccountID TINYINT PRIMARY KEY AUTO_INCREMENT,
 	Email CHAR(50),
 	Username VARCHAR(50),
 	Fullname VARCHAR(50),
@@ -46,7 +46,7 @@ VALUES
 (5, N'xyz@gmail.com', N'xyz',N'Nguyen van E', 5, 5, '2020-05-25');
 
 CREATE TABLE `Group` (
-	GroupID TINYINT PRIMARY KEY,
+	GroupID TINYINT PRIMARY KEY AUTO_INCREMENT,
     GroupName CHAR(50),
     CreatorID TINYINT,
     CreateDate DATE
@@ -75,7 +75,7 @@ VALUES
 (5, 5, '2022-11-11');
 
 CREATE TABLE TypeQuestion(
-	TypeID TINYINT PRIMARY KEY,
+	TypeID TINYINT PRIMARY KEY AUTO_INCREMENT,
     TypeName VARCHAR(50)
 );
 INSERT INTO TypeQuestion(TypeID, TypeName)
@@ -84,7 +84,7 @@ VALUES
 (2, N'Multiple-Choice');
 
 CREATE TABLE CategoryQuestion(
-	CategoryID TINYINT PRIMARY KEY,
+	CategoryID TINYINT PRIMARY KEY AUTO_INCREMENT,
     CategoryName VARCHAR(50)
 );
 INSERT INTO CategoryQuestion(CategoryID, CategoryName)
@@ -96,7 +96,7 @@ VALUES
 (5, N'PostMan');
 
 CREATE TABLE Question(
-	QuestionID TINYINT PRIMARY KEY,
+	QuestionID TINYINT PRIMARY KEY AUTO_INCREMENT,
     Content VARCHAR(500),
     CategoryID TINYINT,
     TypeID TINYINT,
@@ -114,7 +114,7 @@ VALUES
 (5, N'3 IDE pho bien ma cac LTV su dung de lap trinh Java', 1,1,5, '2023-5-10');
 
 CREATE TABLE Answer(
-	AnswerID TINYINT PRIMARY KEY,
+	AnswerID TINYINT PRIMARY KEY AUTO_INCREMENT,
     Content VARCHAR(500),
     QuestionID TINYINT,
     isCorrect BIT(1),
@@ -129,7 +129,7 @@ VALUES
 (5, N'Do la Eclipse, IntelliJ IDEA, NetBeans', 5, 1);
 
 CREATE TABLE Exam(
-	ExamID TINYINT PRIMARY KEY,
+	ExamID TINYINT PRIMARY KEY AUTO_INCREMENT,
     `Code` TINYINT,
     Title VARCHAR(30),
     CategoryID TINYINT,
