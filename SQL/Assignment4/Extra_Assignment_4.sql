@@ -65,7 +65,7 @@ VALUES
 (10, 'REACTNATIVE', '2020-01-27');
 
 -- Question 3: Query all Employee (include: name) who has Java skill
--- Instruction: Using UNION
+-- Instruction: Using UNION??? (use INNER JOIN is more ezi)
 
 -- Question 4: Query all department which has more than 3 employee
 SELECT Department_Name, COUNT(*) AS Employee_Count
