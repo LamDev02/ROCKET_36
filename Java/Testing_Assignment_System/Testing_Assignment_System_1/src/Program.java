@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class Program {
     public static void main(String[] args){
         //Department
@@ -36,7 +34,7 @@ public class Program {
         account1.FullName = "Nguyen Tung Lam";
         account1.DepartmentID = department1;
         account1.PositionID = position1;
-        account1.CreateDate = new Date("2020-12-10");
+        account1.CreateDate = "2020-12-10";
 
         Account account2 = new Account();
         account2.AccountID = 2;
@@ -45,7 +43,7 @@ public class Program {
         account2.FullName = "Ngo Anh Vu";
         account2.DepartmentID = department2;
         account2.PositionID = position2;
-        account2.CreateDate = new Date("2022-09-28");
+        account2.CreateDate = "2022-09-28";
 
         Account account3 = new Account();
         account3.AccountID = 3;
@@ -54,42 +52,42 @@ public class Program {
         account3.FullName = "Tran Le Vinh";
         account3.DepartmentID = department3;
         account3.PositionID = position3;
-        account3.CreateDate = new Date("2021-11-11");
+        account3.CreateDate = "2021-11-11";
 
         //Create Group
         Group group1 = new Group();
         group1.GroupID = 1;
         group1.GroupName = "Nhom A";
         group1.CreatorID = 1;
-        group1.CreateDate = new Date("2020-12-10");
+        group1.CreateDate = "2020-12-10";
 
         Group group2 = new Group();
         group2.GroupID = 2;
         group2.GroupName = "Nhom B";
         group2.CreatorID = 2;
-        group2.CreateDate = new Date("2021-12-19");
+        group2.CreateDate = "2021-12-19";
 
         Group group3 = new Group();
         group3.GroupID = 3;
         group3.GroupName = "Nhom C";
         group3.CreatorID = 3;
-        group3.CreateDate = new Date("2022-09-29");
+        group3.CreateDate = "2022-09-29";
 
         //Create GroupAccount
         GroupAccount GA1 = new GroupAccount();
         GA1.GroupID = group1;
         GA1.AccountID = account1;
-        GA1.JoinDate = new Date("2020-11-11");
+        GA1.JoinDate = "2020-11-11";
 
         GroupAccount GA2 = new GroupAccount();
         GA2.GroupID = group2;
         GA2.AccountID = account2;
-        GA2.JoinDate = new Date("2021-12-20");
+        GA2.JoinDate = "2021-12-20";
 
         GroupAccount GA3 = new GroupAccount();
         GA3.GroupID = group3;
         GA3.AccountID = account3;
-        GA3.JoinDate = new Date("2019-5-15");
+        GA3.JoinDate = "2019-5-15";
 
         //Create TypeQuestion
         TypeQuestion TQ1 =  new TypeQuestion();
@@ -120,7 +118,7 @@ public class Program {
         q1.CategoryID = CQ1;
         q1.TypeID = TQ1;
         q1.CreatorID = 1;
-        q1.CreateDate = new Date("2020-09-30");
+        q1.CreateDate = "2020-09-30";
 
         Question q2 = new Question();
         q2.QuestionID = 2;
@@ -128,7 +126,7 @@ public class Program {
         q2.CategoryID = CQ2;
         q2.TypeID = TQ2;
         q2.CreatorID = 2;
-        q2.CreateDate = new Date("2021-07-29");
+        q2.CreateDate = "2021-07-29";
 
         Question q3 = new Question();
         q3.QuestionID = 3;
@@ -136,7 +134,7 @@ public class Program {
         q3.CategoryID = CQ3;
         q3.TypeID = TQ1;
         q3.CreatorID = 3;
-        q3.CreateDate = new Date("2020-07-18");
+        q3.CreateDate = "2020-07-18";
 
         //Create Answer
         Answer ans1 = new Answer();
@@ -165,7 +163,7 @@ public class Program {
         e1.CategoryID = 1;
         e1.Duration = "60 minutes";
         e1.CreatorID = 1;
-        e1.CreateDate = new Date("2023-07-18");
+        e1.CreateDate = "2023-07-18";
 
         Exam e2 = new Exam();
         e2.ExamID = 2;
@@ -174,7 +172,7 @@ public class Program {
         e2.CategoryID = 2;
         e2.Duration = "45 minutes";
         e2.CreatorID = 2;
-        e2.CreateDate = new Date("2023-07-17");
+        e2.CreateDate =  "2023-07-17";
 
         Exam e3 = new Exam();
         e3.ExamID = 3;
@@ -183,7 +181,7 @@ public class Program {
         e3.CategoryID = 3;
         e3.Duration = "15 minutes";
         e3.CreatorID = 3;
-        e3.CreateDate = new Date("2023-07-16");
+        e3.CreateDate = "2023-07-16";
 
         //Create ExamQuestion
         ExamQuestion eq1 = new ExamQuestion();
@@ -201,6 +199,7 @@ public class Program {
         System.out.println("Thong tin vi tri");
         System.out.println("Position ID" + position1.PositionID);
         System.out.println("Position Name: " + position1.positionName);
+        System.out.println("\n");
 
         //Account
         System.out.println("Thong tin ve tai khoan");
@@ -211,6 +210,7 @@ public class Program {
         System.out.println("DepartmentID: " + account1.DepartmentID);
         System.out.println("PositionID: " + account1.PositionID);
         System.out.println("CreateDate: " + account1.CreateDate);
+        System.out.println("\n");
 
         //Group
         System.out.println("Thong tin ve Group");
@@ -218,22 +218,26 @@ public class Program {
         System.out.println("GroupName: " + group1.GroupName);
         System.out.println("CreatorID: " + group1.CreatorID);
         System.out.println("CreateDate: " + group1.CreateDate);
+        System.out.println("\n");
 
         //Group Account
         System.out.println("Thong tin ve Group Account");
         System.out.println("GroupID: " + GA1.GroupID);
         System.out.println("AccountID" + GA1.AccountID);
         System.out.println("JoinDate" + GA1.JoinDate);
+        System.out.println("\n");
 
         //TypeQuestion
         System.out.println("Thong tin ve Type Question");
         System.out.println("TypeID: " + TQ1.TypeID);
         System.out.println("TypeName: " + TQ1.typeName);
+        System.out.println("\n");
 
         //CategoryQuestion
         System.out.println("Thong tin ve Category Question");
         System.out.println("CategoryID: " + CQ1.CategoryID);
         System.out.println("CategoryName: " + CQ1.CategoryName);
+        System.out.println("\n");
 
         //Question
         System.out.println("Thong tin ve Question");
@@ -243,6 +247,7 @@ public class Program {
         System.out.println("TypeID: " + q1.TypeID);
         System.out.println("CreatorID: " + q1.CreatorID);
         System.out.println("CreateDate:" + q1.CreateDate);
+        System.out.println("\n");
 
         //Answer
         System.out.println("Thong tin ve Answer");
@@ -250,6 +255,7 @@ public class Program {
         System.out.println("Content: " + ans1.Content);
         System.out.println("QuestionID: " + ans1.QuestionID);
         System.out.println("isCorrect" + ans1.isCorrect);
+        System.out.println("\n");
 
         //Exam
         System.out.println("Thong tin ve Exam");
@@ -260,10 +266,20 @@ public class Program {
         System.out.println("Duration: " + e1.Duration);
         System.out.println("CreatorID: " + e1.CreatorID);
         System.out.println("CreateDate: " + e1.CreateDate);
+        System.out.println("\n");
 
         //ExamQuestion
         System.out.println("Thong tin ve ExamQuestion");
         System.out.println("ExamID: " + eq1.ExamID);
         System.out.println("QuestionID: " +eq1.QuestionID);
+        System.out.println("\n");
+
+        //Testing_system_assignment_2
+        System.out.println("-----------");
+        if(account2.DepartmentID == null){
+            System.out.println("Nhan vien nay khong co phong ban");
+        }else {
+            System.out.println("Phong ban cua nhan vien nay la: " + department2.DepartmentName);
+        }
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Exam {
     int ExamID;
     short Code;
