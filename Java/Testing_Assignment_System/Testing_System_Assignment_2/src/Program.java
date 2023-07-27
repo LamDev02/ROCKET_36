@@ -1,9 +1,7 @@
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class Program {
     public static void main(String[] args){
@@ -333,6 +331,7 @@ public class Program {
         }
 
         System.out.println("---------Question 13----------");
+
         System.out.println("---------Question 14----------");
         List<Account> accountList2 = new ArrayList<>();
         accountList2.add(account1);
@@ -370,10 +369,64 @@ public class Program {
         String fullName = "Nguyễn Văn A";
         System.out.println("Tên tôi là " + fullName + " và tôi đang độc thân");
         System.out.println("-----------Question 5-----------");
-        LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH'h':mm'm':ss's'");
-        String formattedDateTime = now.format(formatter);
-        System.out.println("Thời gian đã được định dạng là: " + formattedDateTime);
+
+//        System.out.println("-----------Exercise 3-----------");
+//        System.out.println("-----------Question 1-----------");
+//        List<Exam> examList = new ArrayList<>();
+//        examList.add(e1);
+//        examList.add(e2);
+//        examList.add(e3);
+//
+//        // Display information of the creation date for each exam using for-each loop
+//        DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+//
+//        for (Exam exam : examList) {
+//            LocalDateTime createDate = LocalDateTime.parse(exam.CreateDate, formatter2);
+//            String formattedCreateDate = createDate.format(formatter2);
+//
+//            System.out.println("Exam đã tạo ngày: " + formattedCreateDate);
+//        }
+//        System.out.println("-------------Question 3------------");
+//        List<Exam> examList2 = new ArrayList<>();
+//        examList2.add(e1);
+//        examList2.add(e2);
+//        examList2.add(e3);
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+//        for (Exam exam : examList) {
+//            LocalDateTime createDate = LocalDateTime.parse(exam.CreateDate, formatter);
+//            int year = createDate.getYear();
+//
+//            System.out.println("Năm của create date là: " + year);
+//        }
+
+        System.out.println("----------Exercise 4-----------");
+        System.out.println("----------Question 1-----------");
+        Random random = new Random();
+        int RanNum = random.nextInt();
+        System.out.println("So nguyen ngau nhien la: " + RanNum);
+
+        System.out.println("----------Question 2-----------");
+        double RanDouble = random.nextDouble();
+        System.out.println("So thuc ngau nhien la: " + RanDouble);
+
+        System.out.println("----------Exercise 5-----------");
+        System.out.println("----------Question 1-----------");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhap so nguyen thu nhat: ");
+        int number1 = scanner.nextInt();
+        System.out.println("Nhap so nguyen thu hai: ");
+        int number2 = scanner.nextInt();
+        System.out.println("Nhap so nguyen thu ba: ");
+        int number3 = scanner.nextInt();
+        System.out.println("Ba so nguyen ban vua nhap la: " + number1 + ", " + number2 + ", " + number3);
+
+
+        System.out.println("----------Question 3-----------");
+        System.out.println("Nhap ho va ten: ");
+        String fullName1 = scanner.nextLine();
+        System.out.println("Ho va ten ban vua nhap la: " +fullName1);
+
+
 
     }
 }
